@@ -26,42 +26,45 @@ const ChildIcon: React.FC<ChildIconProps> = ({
 
   const colorClass = `bg-child-${childId}`;
 
-  // 性別に応じたかわいい子どもキャラクター
+  // 性別に応じたバランスの良いかわいい子どもキャラクター
   const getChildIllustration = () => {
     if (gender === 'boy') {
       return (
         <div className="relative w-full h-full flex items-center justify-center">
+          {/* 髪 */}
+          <div className="absolute top-2 w-7 h-3 bg-amber-800 rounded-t-full"></div>
           {/* 顔 */}
-          <div className="absolute w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center">
+          <div className="absolute top-3 w-6 h-6 bg-orange-100 rounded-full flex items-center justify-center">
             {/* 目 */}
-            <div className="flex space-x-1">
+            <div className="absolute top-1.5 flex space-x-1.5">
               <div className="w-1 h-1 bg-black rounded-full"></div>
               <div className="w-1 h-1 bg-black rounded-full"></div>
             </div>
             {/* 口 */}
-            <div className="absolute bottom-2 w-2 h-1 bg-red-400 rounded-full"></div>
+            <div className="absolute bottom-1 w-1.5 h-0.5 bg-red-400 rounded-full"></div>
           </div>
-          {/* 髪 */}
-          <div className="absolute top-1 w-6 h-4 bg-amber-800 rounded-t-full"></div>
         </div>
       );
     } else {
       return (
         <div className="relative w-full h-full flex items-center justify-center">
+          {/* 髪（女の子用のロングヘア） */}
+          <div className="absolute top-2 w-7 h-4 bg-amber-600 rounded-t-full"></div>
+          {/* サイドの髪 */}
+          <div className="absolute top-3 left-1.5 w-1.5 h-2 bg-amber-600 rounded-full"></div>
+          <div className="absolute top-3 right-1.5 w-1.5 h-2 bg-amber-600 rounded-full"></div>
           {/* 顔 */}
-          <div className="absolute w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center">
+          <div className="absolute top-3 w-6 h-6 bg-orange-100 rounded-full flex items-center justify-center">
             {/* 目 */}
-            <div className="flex space-x-1">
+            <div className="absolute top-1.5 flex space-x-1.5">
               <div className="w-1 h-1 bg-black rounded-full"></div>
               <div className="w-1 h-1 bg-black rounded-full"></div>
             </div>
             {/* 口 */}
-            <div className="absolute bottom-2 w-2 h-1 bg-red-400 rounded-full"></div>
+            <div className="absolute bottom-1 w-1.5 h-0.5 bg-red-400 rounded-full"></div>
           </div>
-          {/* 髪（女の子用のツインテール風） */}
-          <div className="absolute top-1 w-8 h-4 bg-amber-600 rounded-t-full"></div>
-          <div className="absolute top-2 left-0 w-2 h-2 bg-amber-600 rounded-full"></div>
-          <div className="absolute top-2 right-0 w-2 h-2 bg-amber-600 rounded-full"></div>
+          {/* リボン */}
+          <div className="absolute top-2 w-2 h-1 bg-pink-400 rounded-sm"></div>
         </div>
       );
     }
