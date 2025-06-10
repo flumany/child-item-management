@@ -26,51 +26,50 @@ const ChildIcon: React.FC<ChildIconProps> = ({
 
   const colorClass = `bg-child-${childId}`;
 
-  // シンプルな手描き風キャラクター
+  // 可愛いバランスの取れた子どもキャラクター
   const getChildIllustration = () => {
     if (gender === 'boy') {
       return (
         <div className="relative w-full h-full flex items-center justify-center">
-          {/* 基本の顔 */}
-          <div className="w-full h-full rounded-full flex items-center justify-center relative">
-            {/* 髪の毛（上部の線） */}
-            <div className="absolute top-1 w-6 h-1 border-t-2 border-black rounded-full transform rotate-3"></div>
-            <div className="absolute top-1.5 left-2 w-2 h-0.5 border-t-2 border-black rounded-full transform -rotate-12"></div>
-            <div className="absolute top-1.5 right-2 w-2 h-0.5 border-t-2 border-black rounded-full transform rotate-12"></div>
+          {/* 顔のベース */}
+          <div className="w-8 h-8 bg-orange-100 rounded-full relative">
+            {/* 髪の毛 */}
+            <div className="absolute -top-1 left-1 right-1 h-3 bg-amber-700 rounded-t-full"></div>
+            <div className="absolute top-0 left-0 w-2 h-2 bg-amber-700 rounded-full"></div>
+            <div className="absolute top-0 right-0 w-2 h-2 bg-amber-700 rounded-full"></div>
             
             {/* 目 */}
-            <div className="absolute top-3 flex space-x-2">
-              <div className="w-1 h-1 bg-black rounded-full"></div>
-              <div className="w-1 h-1 bg-black rounded-full"></div>
-            </div>
+            <div className="absolute top-2 left-2 w-1 h-1 bg-black rounded-full"></div>
+            <div className="absolute top-2 right-2 w-1 h-1 bg-black rounded-full"></div>
             
             {/* 笑顔の口 */}
-            <div className="absolute bottom-3 w-3 h-1.5 border-b-2 border-black rounded-full"></div>
+            <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-2 h-1 border-b-2 border-black rounded-full"></div>
           </div>
         </div>
       );
     } else {
       return (
         <div className="relative w-full h-full flex items-center justify-center">
-          {/* 基本の顔 */}
-          <div className="w-full h-full rounded-full flex items-center justify-center relative">
-            {/* 髪の毛（女の子用、カールした線） */}
-            <div className="absolute top-0.5 w-5 h-2 border-t-2 border-black rounded-t-full transform -rotate-6"></div>
-            <div className="absolute top-1 left-1 w-2 h-2 border-l-2 border-black rounded-full transform rotate-45"></div>
-            <div className="absolute top-1 right-1 w-2 h-2 border-r-2 border-black rounded-full transform -rotate-45"></div>
+          {/* 顔のベース */}
+          <div className="w-8 h-8 bg-orange-100 rounded-full relative">
+            {/* 髪の毛（女の子用） */}
+            <div className="absolute -top-1 left-0 right-0 h-4 bg-amber-600 rounded-t-full"></div>
+            <div className="absolute top-1 left-0 w-2 h-3 bg-amber-600 rounded-l-full"></div>
+            <div className="absolute top-1 right-0 w-2 h-3 bg-amber-600 rounded-r-full"></div>
             
-            {/* 目（少し優しい表情） */}
-            <div className="absolute top-3 flex space-x-2">
-              <div className="w-1 h-1 bg-black rounded-full"></div>
-              <div className="w-1 h-1 bg-black rounded-full"></div>
-            </div>
+            {/* 目 */}
+            <div className="absolute top-2 left-2 w-1 h-1 bg-black rounded-full"></div>
+            <div className="absolute top-2 right-2 w-1 h-1 bg-black rounded-full"></div>
             
             {/* 笑顔の口 */}
-            <div className="absolute bottom-3 w-3 h-1.5 border-b-2 border-black rounded-full"></div>
+            <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-2 h-1 border-b-2 border-black rounded-full"></div>
             
             {/* ほっぺの赤み */}
-            <div className="absolute bottom-4 left-1 w-1 h-1 bg-pink-300 rounded-full opacity-60"></div>
-            <div className="absolute bottom-4 right-1 w-1 h-1 bg-pink-300 rounded-full opacity-60"></div>
+            <div className="absolute bottom-3 left-1 w-1 h-0.5 bg-pink-300 rounded-full opacity-70"></div>
+            <div className="absolute bottom-3 right-1 w-1 h-0.5 bg-pink-300 rounded-full opacity-70"></div>
+            
+            {/* リボン */}
+            <div className="absolute -top-0.5 left-1/2 transform -translate-x-1/2 w-2 h-1 bg-pink-400 rounded-sm"></div>
           </div>
         </div>
       );
