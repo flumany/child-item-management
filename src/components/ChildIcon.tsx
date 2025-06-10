@@ -39,8 +39,8 @@ const ChildIcon: React.FC<ChildIconProps> = ({
             <div className="absolute top-0 right-0 w-2 h-2 bg-amber-700 rounded-full"></div>
             
             {/* 目 */}
-            <div className="absolute top-2.5 left-2 w-1 h-1 bg-black rounded-full"></div>
-            <div className="absolute top-2.5 right-2 w-1 h-1 bg-black rounded-full"></div>
+            <div className="absolute top-3 left-2 w-1 h-1 bg-black rounded-full"></div>
+            <div className="absolute top-3 right-2 w-1 h-1 bg-black rounded-full"></div>
             
             {/* 笑顔の口 */}
             <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-2 h-1 border-b-2 border-black rounded-full"></div>
@@ -58,8 +58,8 @@ const ChildIcon: React.FC<ChildIconProps> = ({
             <div className="absolute top-1 right-0 w-2 h-3 bg-amber-600 rounded-r-full"></div>
             
             {/* 目 */}
-            <div className="absolute top-2.5 left-2 w-1 h-1 bg-black rounded-full"></div>
-            <div className="absolute top-2.5 right-2 w-1 h-1 bg-black rounded-full"></div>
+            <div className="absolute top-3 left-2 w-1 h-1 bg-black rounded-full"></div>
+            <div className="absolute top-3 right-2 w-1 h-1 bg-black rounded-full"></div>
             
             {/* 笑顔の口 */}
             <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-2 h-1 border-b-2 border-black rounded-full"></div>
