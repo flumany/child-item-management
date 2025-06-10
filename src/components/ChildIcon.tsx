@@ -26,18 +26,42 @@ const ChildIcon: React.FC<ChildIconProps> = ({
 
   const colorClass = `bg-child-${childId}`;
 
-  // 性別に応じたミニマルなイラスト
+  // 性別に応じたかわいい子どもキャラクター
   const getChildIllustration = () => {
     if (gender === 'boy') {
       return (
-        <div className="text-white text-xl">
-          ◉
+        <div className="relative w-full h-full flex items-center justify-center">
+          {/* 顔 */}
+          <div className="absolute w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center">
+            {/* 目 */}
+            <div className="flex space-x-1">
+              <div className="w-1 h-1 bg-black rounded-full"></div>
+              <div className="w-1 h-1 bg-black rounded-full"></div>
+            </div>
+            {/* 口 */}
+            <div className="absolute bottom-2 w-2 h-1 bg-red-400 rounded-full"></div>
+          </div>
+          {/* 髪 */}
+          <div className="absolute top-1 w-6 h-4 bg-amber-800 rounded-t-full"></div>
         </div>
       );
     } else {
       return (
-        <div className="text-white text-xl">
-          ◯
+        <div className="relative w-full h-full flex items-center justify-center">
+          {/* 顔 */}
+          <div className="absolute w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center">
+            {/* 目 */}
+            <div className="flex space-x-1">
+              <div className="w-1 h-1 bg-black rounded-full"></div>
+              <div className="w-1 h-1 bg-black rounded-full"></div>
+            </div>
+            {/* 口 */}
+            <div className="absolute bottom-2 w-2 h-1 bg-red-400 rounded-full"></div>
+          </div>
+          {/* 髪（女の子用のツインテール風） */}
+          <div className="absolute top-1 w-8 h-4 bg-amber-600 rounded-t-full"></div>
+          <div className="absolute top-2 left-0 w-2 h-2 bg-amber-600 rounded-full"></div>
+          <div className="absolute top-2 right-0 w-2 h-2 bg-amber-600 rounded-full"></div>
         </div>
       );
     }
