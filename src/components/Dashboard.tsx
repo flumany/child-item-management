@@ -8,6 +8,7 @@ interface Child {
   id: number;
   name: string;
   color: string;
+  gender: 'boy' | 'girl';
 }
 
 interface Item {
@@ -24,8 +25,8 @@ interface Item {
 const Dashboard = () => {
   const [activeChild, setActiveChild] = useState<number>(1);
   const [children] = useState<Child[]>([
-    { id: 1, name: 'あいちゃん', color: 'child-1' },
-    { id: 2, name: 'ゆうくん', color: 'child-2' },
+    { id: 1, name: 'あいちゃん', color: 'child-1', gender: 'girl' },
+    { id: 2, name: 'ゆうくん', color: 'child-2', gender: 'boy' },
   ]);
 
   const [items] = useState<Item[]>([
@@ -47,7 +48,7 @@ const Dashboard = () => {
       usageDays: 90,
       purchaseDate: '2024-03-01',
       size: '13cm',
-      imageUrl: 'https://images.unsplash.com/photo-1721322800607-8c38375eef04?w=200&h=200&fit=crop'
+      imageUrl: 'https://images.unsplash.com/photo-1582562124811-c09040d0a901?w=200&h=200&fit=crop'
     },
     {
       id: 3,
@@ -57,7 +58,7 @@ const Dashboard = () => {
       usageDays: 365,
       purchaseDate: '2023-06-10',
       size: '-',
-      imageUrl: 'https://images.unsplash.com/photo-1535268647677-300dbf3d78d1?w=200&h=200&fit=crop'
+      imageUrl: 'https://images.unsplash.com/photo-1452378174528-3090a4bba7b2?w=200&h=200&fit=crop'
     }
   ]);
 
@@ -77,7 +78,7 @@ const Dashboard = () => {
       {/* ヘッダー */}
       <div className="child-card p-6">
         <h1 className="text-2xl font-bold text-gray-800 mb-4 handwritten-text">
-          👶 子供用品管理
+          🧸 子供用品管理
         </h1>
         
         {/* 子供選択タブ */}
@@ -87,6 +88,7 @@ const Dashboard = () => {
               key={child.id}
               childId={child.id}
               name={child.name}
+              gender={child.gender}
               isActive={activeChild === child.id}
               onClick={() => setActiveChild(child.id)}
               size="lg"

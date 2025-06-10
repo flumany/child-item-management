@@ -4,6 +4,7 @@ import React from 'react';
 interface ChildIconProps {
   childId: number;
   name: string;
+  gender: 'boy' | 'girl';
   isActive?: boolean;
   onClick?: () => void;
   size?: 'sm' | 'md' | 'lg';
@@ -12,6 +13,7 @@ interface ChildIconProps {
 const ChildIcon: React.FC<ChildIconProps> = ({ 
   childId, 
   name, 
+  gender,
   isActive = false, 
   onClick,
   size = 'md'
@@ -23,6 +25,23 @@ const ChildIcon: React.FC<ChildIconProps> = ({
   };
 
   const colorClass = `bg-child-${childId}`;
+
+  // 性別に応じたイラスト
+  const getChildIllustration = () => {
+    if (gender === 'boy') {
+      return (
+        <div className="text-white text-xl">
+          👦
+        </div>
+      );
+    } else {
+      return (
+        <div className="text-white text-xl">
+          👧
+        </div>
+      );
+    }
+  };
 
   return (
     <button
@@ -37,9 +56,13 @@ const ChildIcon: React.FC<ChildIconProps> = ({
         transition-all duration-300 
         hover:scale-110
         ${isActive ? 'ring-4 ring-white ring-opacity-50 scale-110' : ''}
+        relative overflow-hidden
       `}
     >
-      {name.charAt(0)}
+      {getChildIllustration()}
+      <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-20 text-xs py-0.5 text-center">
+        {name.charAt(0)}
+      </div>
     </button>
   );
 };
