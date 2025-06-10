@@ -26,18 +26,18 @@ const ChildIcon: React.FC<ChildIconProps> = ({
 
   const colorClass = `bg-child-${childId}`;
 
-  // 性別に応じたイラスト
+  // 性別に応じたミニマルなイラスト
   const getChildIllustration = () => {
     if (gender === 'boy') {
       return (
         <div className="text-white text-xl">
-          👦
+          ◉
         </div>
       );
     } else {
       return (
         <div className="text-white text-xl">
-          👧
+          ◯
         </div>
       );
     }

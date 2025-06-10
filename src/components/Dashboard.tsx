@@ -78,7 +78,7 @@ const Dashboard = () => {
       {/* ヘッダー */}
       <div className="child-card p-6">
         <h1 className="text-2xl font-bold text-gray-800 mb-4 handwritten-text">
-          🧸 子供用品管理
+          ◯ 子供用品管理
         </h1>
         
         {/* 子供選択タブ */}
