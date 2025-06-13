@@ -81,9 +81,9 @@ const Dashboard = () => {
   const monthlyPurchaseAmount = activeChild === 1 ? 2780 : 34980;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-pastel-offwhite to-pastel-cream p-4 space-y-6">
+    <div className="min-h-screen bg-gradient-to-br from-yellow-50 to-yellow-100 p-4 space-y-6">
       {/* ヘッダー */}
-      <div className="child-card p-6">
+      <div className="bg-yellow-100/90 backdrop-blur-sm border-2 border-yellow-200/50 rounded-3xl shadow-lg p-6">
         <h1 className="text-2xl font-bold text-gray-800 mb-4 handwritten-text">
           子供用品管理
         </h1>
@@ -128,32 +128,32 @@ const Dashboard = () => {
 
       {/* 統計カード */}
       <div className="grid grid-cols-2 gap-4">
-        <Card className="child-card">
+        <Card className="bg-yellow-100/90 backdrop-blur-sm border-2 border-yellow-200/50 rounded-3xl shadow-lg">
           <CardContent className="p-4 text-center">
-            <div className="text-2xl font-bold text-primary mb-1">{totalItems}</div>
+            <div className="text-2xl font-bold text-sky-600 mb-1">{totalItems}</div>
             <div className="text-sm text-gray-600">総アイテム数</div>
           </CardContent>
         </Card>
         
-        <Card className="child-card">
+        <Card className="bg-yellow-100/90 backdrop-blur-sm border-2 border-yellow-200/50 rounded-3xl shadow-lg">
           <CardContent className="p-4 text-center">
-            <div className="text-2xl font-bold text-accent mb-1">¥{monthlyPurchaseAmount.toLocaleString()}</div>
+            <div className="text-2xl font-bold text-sky-600 mb-1">¥{monthlyPurchaseAmount.toLocaleString()}</div>
             <div className="text-sm text-gray-600">今月の購入額</div>
           </CardContent>
         </Card>
       </div>
 
       {/* カテゴリ別サマリー */}
-      <Card className="child-card">
+      <Card className="bg-yellow-100/90 backdrop-blur-sm border-2 border-yellow-200/50 rounded-3xl shadow-lg">
         <CardHeader>
           <CardTitle className="text-lg">カテゴリ別アイテム数</CardTitle>
         </CardHeader>
         <CardContent>
           <div className="grid grid-cols-2 gap-4">
             {Object.entries(categoryStats).map(([category, count]) => (
-              <div key={category} className="flex justify-between items-center p-3 bg-pastel-cream rounded-xl">
+              <div key={category} className="flex justify-between items-center p-3 bg-yellow-50 rounded-xl">
                 <span className="font-medium">{category}</span>
-                <span className="text-lg font-bold text-primary">{count}</span>
+                <span className="text-lg font-bold text-sky-600">{count}</span>
               </div>
             ))}
           </div>
@@ -161,7 +161,7 @@ const Dashboard = () => {
       </Card>
 
       {/* 最近登録したアイテム */}
-      <Card className="child-card">
+      <Card className="bg-yellow-100/90 backdrop-blur-sm border-2 border-yellow-200/50 rounded-3xl shadow-lg">
         <CardHeader>
           <CardTitle className="text-lg">最近登録したアイテム</CardTitle>
         </CardHeader>
@@ -231,7 +231,7 @@ const Dashboard = () => {
       </Card>
 
       {/* フローティングアクションボタン */}
-      <button className="floating-button">
+      <button className="fixed bottom-6 right-6 w-14 h-14 bg-sky-400 hover:bg-sky-500 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center text-white animate-bounce-gentle">
         <Plus className="w-6 h-6" />
       </button>
     </div>

@@ -76,22 +76,22 @@
 
   body {
     @apply bg-background text-foreground font-sans;
-    background: linear-gradient(135deg, #FFFAF0 0%, #FFF8DC 100%);
+    background: linear-gradient(135deg, #FFF9E6 0%, #FFECB3 100%);
     min-height: 100vh;
   }
 }
 
 @layer components {
   .child-card {
-    @apply bg-white/80 backdrop-blur-sm border-2 border-white/50 rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300;
+    @apply bg-yellow-100/90 backdrop-blur-sm border-2 border-yellow-200/50 rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300;
   }
   
   .floating-button {
-    @apply fixed bottom-6 right-6 w-14 h-14 bg-accent hover:bg-accent/90 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center text-white animate-bounce-gentle;
+    @apply fixed bottom-6 right-6 w-14 h-14 bg-sky-400 hover:bg-sky-500 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center text-white animate-bounce-gentle;
   }
   
   .gentle-border {
-    @apply border-2 border-white/30 rounded-2xl;
+    @apply border-2 border-yellow-200/30 rounded-2xl;
   }
   
   .handwritten-text {
