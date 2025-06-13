@@ -24,7 +24,12 @@ const ChildIcon: React.FC<ChildIconProps> = ({
     lg: 'w-16 h-16 text-base'
   };
 
-  const colorClass = `bg-child-${childId}`;
+  // 画像に合わせた配色
+  const getBgColor = () => {
+    if (childId === 1) return 'bg-pink-200'; // あいちゃん - ピンク
+    if (childId === 2) return 'bg-blue-200'; // ゆうくん - 水色
+    return 'bg-gray-200';
+  };
 
   // 可愛いバランスの取れた子どもキャラクター
   const getChildIllustration = () => {
@@ -39,8 +44,8 @@ const ChildIcon: React.FC<ChildIconProps> = ({
             <div className="absolute top-0 right-0 w-2 h-2 bg-amber-700 rounded-full"></div>
             
             {/* 目 */}
-            <div className="absolute top-3 left-2 w-1 h-1 bg-black rounded-full"></div>
-            <div className="absolute top-3 right-2 w-1 h-1 bg-black rounded-full"></div>
+            <div className="absolute top-4 left-2 w-1 h-1 bg-black rounded-full"></div>
+            <div className="absolute top-4 right-2 w-1 h-1 bg-black rounded-full"></div>
             
             {/* 笑顔の口 */}
             <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-2 h-1 border-b-2 border-black rounded-full"></div>
@@ -58,8 +63,8 @@ const ChildIcon: React.FC<ChildIconProps> = ({
             <div className="absolute top-1 right-0 w-2 h-3 bg-amber-600 rounded-r-full"></div>
             
             {/* 目 */}
-            <div className="absolute top-3 left-2 w-1 h-1 bg-black rounded-full"></div>
-            <div className="absolute top-3 right-2 w-1 h-1 bg-black rounded-full"></div>
+            <div className="absolute top-4 left-2 w-1 h-1 bg-black rounded-full"></div>
+            <div className="absolute top-4 right-2 w-1 h-1 bg-black rounded-full"></div>
             
             {/* 笑顔の口 */}
             <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-2 h-1 border-b-2 border-black rounded-full"></div>
@@ -81,10 +86,10 @@ const ChildIcon: React.FC<ChildIconProps> = ({
       onClick={onClick}
       className={`
         ${sizeClasses[size]} 
-        ${colorClass}
+        ${getBgColor()}
         rounded-full 
         flex items-center justify-center 
-        font-bold text-white 
+        font-bold text-gray-700
         shadow-lg hover:shadow-xl 
         transition-all duration-300 
         hover:scale-110
@@ -93,7 +98,7 @@ const ChildIcon: React.FC<ChildIconProps> = ({
       `}
     >
       {getChildIllustration()}
-      <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-20 text-xs py-0.5 text-center">
+      <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-20 text-xs py-0.5 text-center text-white">
         {name.charAt(0)}
       </div>
     </button>
